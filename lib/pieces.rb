@@ -38,16 +38,20 @@ def possible_moves_king(position)
 end
 
 def possible_moves_pawn(position)
+end
+
+def possible_moves_bishop(position)
   pm = []
-  [-1, 0, 1].each do |line|
-    [-1, 0, 1].each do |column|
-      pm << [position[0] + line, position[1] + column]
-    end
+  (-7..7).each do |n|
+    pm << [position[0] + n, position[1] + n]
+    pm << [position[0] - n, position[1] + n]
+    pm << [position[0] + n, position[1] - n]
   end
   legal_moves(position, pm)
 end
 
 def legal_moves(position, pm)
+  pm.uniq!
   pm.delete_if do |move|
     move == position || move[0] > 7 || move[1] > 7 || move[0] < 0 || move[1] < 0
   end
