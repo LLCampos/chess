@@ -50,6 +50,31 @@ def possible_moves_bishop(position)
   legal_moves(position, pm)
 end
 
+def possible_moves_rook(position)
+  pm = []
+  (1..7).each do |n|
+    pm << [position[0], position[1] + n]
+    pm << [position[0], position[1] - n]
+    pm << [position[0] + n, position[1]]
+    pm << [position[0] - n, position[1]]
+  end
+  legal_moves(position, pm)
+end
+
+def possible_moves_queen(position)
+  possible_moves_rook(position) + possible_moves_bishop(position)
+end
+
+def possible_moves_knight(position)
+  pm = []
+  [-2, -1, 1, 2].each do |x|
+    [-2, -1, 1, 2].each do |y|
+      pm << [position[0] + x, position[1] + y] if x.abs != y.abs
+    end
+  end
+  legal_moves(position, pm)
+end
+
 def legal_moves(position, pm)
   pm.uniq!
   pm.delete_if do |move|
