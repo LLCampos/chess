@@ -1,5 +1,4 @@
 class Piece
-
   def initialize(symbol, color, type, position)
     @symbol = symbol
     @color = color
@@ -12,17 +11,17 @@ end
 
 def possible_moves(type, position)
   case type
-  when king
+  when 'king'
     possible_moves_king(position)
-  when queen
+  when 'queen'
     possible_moves_queen(position)
-  when rook
+  when 'rook'
     possible_moves_rook(position)
-  when bishop
+  when 'bishop'
     possible_moves_bishop(position)
-  when knight
+  when 'knight'
     possible_moves_knight(position)
-  when pawn
+  when 'pawn'
     possible_moves_pawn(position)
   end
 end
