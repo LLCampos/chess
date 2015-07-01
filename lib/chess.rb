@@ -48,12 +48,28 @@ class ChessGame
              ]
   end
 
+  # shows the board
   def show
     puts '   ' + (1..8).to_a.join('  ')
     board.each_with_index do |line, nline|
       line_symbol = line.map { |position| position == ' ' ? ' ' : position.symbol }
       puts "#{nline + 1} |" + line_symbol.join(' |') + ' |'
     end
+  end
+
+  # returns all the spaces on the board that are occupied with a piece of color 'color'
+  def occupied_spaces(color)
+    result = []
+    board.each do |line|
+      line = line.select { |house| house == ' ' ? false : house.color == color }
+      result << line.map(&:position)
+    end
+    result.flatten(1)
+  end
+
+  # returns all the spaces on the board that are occupied
+  def all_occupied_spaces
+    occupied_spaces('white') + occupied_spaces('black')
   end
 
 end

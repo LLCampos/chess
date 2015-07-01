@@ -1,5 +1,5 @@
 class Piece
-  attr_accessor :symbol, :position, :possible_moves
+  attr_accessor :symbol, :color, :position, :possible_moves
 
   def initialize(symbol, color, type, position)
     @symbol = symbol
@@ -7,19 +7,6 @@ class Piece
     @position = position
     @possible_moves = possible_next_moves(type, position)
   end
-
-  @w_king = "\u2654"
-  @w_queen = "\u2655"
-  @w_rook = "\u2656"
-  @w_bishop = "\u2657"
-  @w_knight = "\u2658"
-  @w_pawn = "\u2659"
-  @b_king = "\u265A"
-  @b_queen = "\u265B"
-  @b_rook = "\u265C"
-  @b_bishop = "\u265D"
-  @b_knight = "\u265E"
-  @b_pawn = "\u2659F"
 
 
 end
