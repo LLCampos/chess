@@ -33,6 +33,13 @@ class Piece
     end
     legal_moves(position, pm)
   end
+
+  def legal_moves(position, pm)
+    pm.delete_if do |move|
+      move == position || move[0] > 7 || move[1] > 7 || move[0] < 0 || move[1] < 0
+    end
+  end
+
 end
 
 
