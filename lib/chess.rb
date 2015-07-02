@@ -6,46 +6,46 @@ class ChessGame
 
   def initialize
     @board = [
-              [Piece.new("\u265C", 'black', 'rook', [0, 0]),
-               Piece.new("\u265E", 'black', 'knight', [0, 1]),
-               Piece.new("\u265D", 'black', 'bishop', [0, 2]),
-               Piece.new("\u265A", 'black', 'king', [0, 3]),
-               Piece.new("\u265B", 'black', 'queen', [0, 4]),
-               Piece.new("\u265D", 'black', 'bishop', [0, 5]),
-               Piece.new("\u265E", 'black', 'knight', [0, 6]),
-               Piece.new("\u265C", 'black', 'rook', [0, 7])],
+              [Piece.new("\u265C", 'white', 'rook', [0, 0]),
+               Piece.new("\u265E", 'white', 'knight', [0, 1]),
+               Piece.new("\u265D", 'white', 'bishop', [0, 2]),
+               Piece.new("\u265A", 'white', 'king', [0, 3]),
+               Piece.new("\u265B", 'white', 'queen', [0, 4]),
+               Piece.new("\u265D", 'white', 'bishop', [0, 5]),
+               Piece.new("\u265E", 'white', 'knight', [0, 6]),
+               Piece.new("\u265C", 'white', 'rook', [0, 7])],
 
-              [Piece.new("\u265F", 'black', 'pawn', [1, 0]),
-               Piece.new("\u265F", 'black', 'pawn', [1, 1]),
-               Piece.new("\u265F", 'black', 'pawn', [1, 2]),
-               Piece.new("\u265F", 'black', 'pawn', [1, 3]),
-               Piece.new("\u265F", 'black', 'pawn', [1, 4]),
-               Piece.new("\u265F", 'black', 'pawn', [1, 5]),
-               Piece.new("\u265F", 'black', 'pawn', [1, 6]),
-               Piece.new("\u265F", 'black', 'pawn', [1, 7])],
+              [Piece.new("\u265F", 'white', 'pawn', [1, 0]),
+               Piece.new("\u265F", 'white', 'pawn', [1, 1]),
+               Piece.new("\u265F", 'white', 'pawn', [1, 2]),
+               Piece.new("\u265F", 'white', 'pawn', [1, 3]),
+               Piece.new("\u265F", 'white', 'pawn', [1, 4]),
+               Piece.new("\u265F", 'white', 'pawn', [1, 5]),
+               Piece.new("\u265F", 'white', 'pawn', [1, 6]),
+               Piece.new("\u265F", 'white', 'pawn', [1, 7])],
 
               [' '] * 8,
               [' '] * 8,
               [' '] * 8,
               [' '] * 8,
 
-              [Piece.new("\u2659", 'white', 'pawn', [6, 0]),
-               Piece.new("\u2659", 'white', 'pawn', [6, 1]),
-               Piece.new("\u2659", 'white', 'pawn', [6, 2]),
-               Piece.new("\u2659", 'white', 'pawn', [6, 3]),
-               Piece.new("\u2659", 'white', 'pawn', [6, 4]),
-               Piece.new("\u2659", 'white', 'pawn', [6, 5]),
-               Piece.new("\u2659", 'white', 'pawn', [6, 6]),
-               Piece.new("\u2659", 'white', 'pawn', [6, 7])],
+              [Piece.new("\u2659", 'black', 'pawn', [6, 0]),
+               Piece.new("\u2659", 'black', 'pawn', [6, 1]),
+               Piece.new("\u2659", 'black', 'pawn', [6, 2]),
+               Piece.new("\u2659", 'black', 'pawn', [6, 3]),
+               Piece.new("\u2659", 'black', 'pawn', [6, 4]),
+               Piece.new("\u2659", 'black', 'pawn', [6, 5]),
+               Piece.new("\u2659", 'black', 'pawn', [6, 6]),
+               Piece.new("\u2659", 'black', 'pawn', [6, 7])],
 
-              [Piece.new("\u2656", 'white', 'rook', [7, 0]),
-               Piece.new("\u2658", 'white', 'knight', [7, 1]),
-               Piece.new("\u2657", 'white', 'bishop', [7, 2]),
-               Piece.new("\u2654", 'white', 'king', [7, 3]),
-               Piece.new("\u2655", 'white', 'queen', [7, 4]),
-               Piece.new("\u2657", 'white', 'bishop', [7, 5]),
-               Piece.new("\u2658", 'white', 'knight', [7, 6]),
-               Piece.new("\u2656", 'white', 'rook', [7, 7])]
+              [Piece.new("\u2656", 'black', 'rook', [7, 0]),
+               Piece.new("\u2658", 'black', 'knight', [7, 1]),
+               Piece.new("\u2657", 'black', 'bishop', [7, 2]),
+               Piece.new("\u2654", 'black', 'king', [7, 3]),
+               Piece.new("\u2655", 'black', 'queen', [7, 4]),
+               Piece.new("\u2657", 'black', 'bishop', [7, 5]),
+               Piece.new("\u2658", 'black', 'knight', [7, 6]),
+               Piece.new("\u2656", 'black', 'rook', [7, 7])]
              ]
   end
 
@@ -70,7 +70,7 @@ class ChessGame
 
   # returns all the spaces on the board that are occupied
   def all_occupied_spaces
-    occupied_spaces('white') + occupied_spaces('black')
+    occupied_spaces('black') + occupied_spaces('white')
   end
 
   # checks if there is a empty space in the given position
