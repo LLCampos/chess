@@ -79,7 +79,7 @@ class ChessGame
   end
 
   def move_legality(from, to, color)
-    occupied_spaces(color).include?(from) && !occupied_spaces(color).include?(to) && board[from[0]][from[1]].possible_next_moves.include?(to)
+    occupied_spaces(color).include?(from) && !occupied_spaces(color).include?(to) && board[from[0]][from[1]].possible_next_moves(all_occupied_spaces).include?(to)
   end
 
   #def move(from, to)
