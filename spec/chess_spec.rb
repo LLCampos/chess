@@ -51,3 +51,32 @@ describe 'ChessGame' do
     end
 
 end
+
+describe 'Pieces' do
+
+  describe '#possible_next_moves_bishop' do
+      before do
+        @bishop = Piece.new("\u265D", 'white', 'bishop', [4, 3])
+        @occupied_spaces = [[2,1],[3,2],[2,5],[0,7],[5,2],[7,0],[7,6]]
+      end
+
+      it 'return the right set of possible moves' do
+        expect(@bishop.possible_next_moves(@occupied_spaces)).to eql([[3, 2], [2, 5], [3, 4], [5, 2], [5, 4], [6, 5], [7, 6]].sort)
+      end
+
+  end
+
+  describe '#possible_next_moves_rook' do
+      before do
+        @rook = Piece.new("\u265D", 'white', 'rook', [4, 3])
+        @occupied_spaces = [[4, 1], [4, 5], [4, 6], [7, 3], [3, 3]]
+      end
+
+      it 'return the right set of possible moves' do
+        expect(@rook.possible_next_moves(@occupied_spaces)).to eql([[4, 1], [4, 2], [4, 4], [4, 5], [5, 3], [6, 3], [7, 3], [3, 3]].sort)
+      end
+
+  end
+
+
+end

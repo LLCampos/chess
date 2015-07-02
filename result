@@ -1,0 +1,27 @@
+
+[1mFrom:[0m /home/luislc/Desktop/odinproject/chess/lib/pieces.rb @ line 121 Piece#group_possible_moves_rook:
+
+    [1;34m103[0m: [32mdef[0m [1;34mgroup_possible_moves_rook[0m(pm)
+    [1;34m104[0m:   result = []
+    [1;34m105[0m: 
+    [1;34m106[0m:   result << pm.select [32mdo[0m |p|
+    [1;34m107[0m:     p[[1;34m0[0m] == position[[1;34m0[0m] && p[[1;34m1[0m] < position[[1;34m1[0m]
+    [1;34m108[0m:   [32mend[0m
+    [1;34m109[0m: 
+    [1;34m110[0m:   result << pm.select [32mdo[0m |p|
+    [1;34m111[0m:     p[[1;34m0[0m] == position[[1;34m0[0m] && p[[1;34m1[0m] > position[[1;34m1[0m]
+    [1;34m112[0m:   [32mend[0m
+    [1;34m113[0m: 
+    [1;34m114[0m:   result << pm.select [32mdo[0m |p|
+    [1;34m115[0m:     p[[1;34m1[0m] == position[[1;34m1[0m] && p[[1;34m0[0m] < position[[1;34m0[0m]
+    [1;34m116[0m:   [32mend[0m
+    [1;34m117[0m: 
+    [1;34m118[0m:   result << pm.select [32mdo[0m |p|
+    [1;34m119[0m:     p[[1;34m1[0m] == position[[1;34m1[0m] && p[[1;34m0[0m] > position[[1;34m0[0m]
+    [1;34m120[0m:   [32mend[0m
+ => [1;34m121[0m:   binding.pry
+    [1;34m122[0m:   result[[1;34m1[0m].reverse!
+    [1;34m123[0m:   result[[1;34m3[0m].reverse!
+    [1;34m124[0m:   result
+    [1;34m125[0m: [32mend[0m
+
