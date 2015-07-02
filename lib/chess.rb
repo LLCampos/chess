@@ -78,7 +78,20 @@ class ChessGame
     board[position[0]][position[1]] == ' '
   end
 
-  def move(from, to, color)
+  def move_legality(from, to, color)
+    occupied_spaces(color).include?(from) && !occupied_spaces(color).include?(to) && board[from[0]][from[1]].possible_next_moves.include?(to)
   end
 
+  #def move(from, to)
+  #  piece  = board[from[0]][from[1]]
+  #  piece.position = [to[0], to[1]]
+  #  board[from[0]][from[1]] = ' '
+  #  board[to[0]][to[1]] = piece
+  #end
+
 end
+
+# turn
+# Which move do you want to make?
+# move_legality
+# move
