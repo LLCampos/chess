@@ -1,7 +1,7 @@
 require 'chess.rb'
 
 describe 'ChessGame' do
-  before :all do
+  before :each do
     @board = ChessGame.new
   end
 
@@ -49,6 +49,58 @@ describe 'ChessGame' do
       end
 
     end
+
+
+  describe '#move' do
+    it do
+      expect(@board.move([6,0], [5,0], 'black')).to be_truthy
+    end
+    it do
+      expect(@board.move([6,0], [7,0], 'black')).to be_falsey
+    end
+    it do
+      expect(@board.move([6,0], [6,1], 'black')).to be_falsey
+    end
+    it do
+      expect(@board.move([6,0], [5,1], 'black')).to be_falsey
+    end
+    it do
+      expect(@board.move([6,0], [4,0], 'black')).to be_truthy
+    end
+    it do
+      expect(@board.move([7,1], [5,0], 'black')).to be_truthy
+    end
+    it do
+      expect(@board.move([7,1], [5,2], 'black')).to be_truthy
+    end
+    it do
+      expect(@board.move([7,1], [4,2], 'black')).to be_falsey
+    end
+    it do
+      expect(@board.move([1,0], [2,0], 'white')).to be_truthy
+    end
+    it do
+      expect(@board.move([1,0], [0,0], 'white')).to be_falsey
+    end
+    it do
+      expect(@board.move([1,0], [1,1], 'white')).to be_falsey
+    end
+    it do
+      expect(@board.move([1,0], [2,1], 'white')).to be_falsey
+    end
+    it do
+      expect(@board.move([0,1], [2,0], 'white')).to be_truthy
+    end
+    it do
+      expect(@board.move([0,1], [2,2], 'white')).to be_truthy
+    end
+    it do
+      expect(@board.move([0,1], [4,2], 'white')).to be_falsey
+    end
+    it do
+      expect(@board.move([3,2], [4,2], 'white')).to be_falsey
+    end
+  end
 
 end
 

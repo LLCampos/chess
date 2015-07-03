@@ -1,13 +1,14 @@
 require 'pry'
 
 class Piece
-  attr_accessor :symbol, :color, :position, :type
+  attr_accessor :symbol, :color, :position, :type, :n
 
-  def initialize(symbol, color, type, position)
+  def initialize(symbol, color, type, position, n = 0)
     @symbol = symbol
     @color = color
     @position = position
     @type = type
+    @n = n
   end
 
   def possible_next_moves(all_occupied_spaces)
@@ -23,7 +24,7 @@ class Piece
     when 'knight'
       possible_next_moves_knight
     when 'pawn'
-      possible_next_moves_pawn
+      possible_next_moves_pawn(all_occupied_spaces)
     end
   end
 
@@ -49,8 +50,32 @@ class Piece
     pm = legal_moves(pm)
   end
 
+  def possible_next_moves_pawn_horiverti(all_occupied_spaces)
+    front = []
+    if color == 'black'
+      front << [position[0] - 1, position[1]]
+      front << [position[0] - 2, position[1]] if n == 1 && !all_occupied_spaces.include?([position[0] - 1, position[1]])
+    else
+      front << [position[0] + 1, position[1]]
+      front << [position[0] + 2, position[1]] if n == 1 && !all_occupied_spaces.include?([position[0] + 1, position[1]])
+    end
+    legal_moves(front)
+  end
 
-  def possible_next_moves_pawn
+  def possible_next_moves_pawn_diag
+    diag = []
+    if color == 'black'
+      diag << [position[0] - 1, position[1] - 1]
+      diag << [position[0] - 1, position[1] + 1]
+    else
+      diag << [position[0] + 1, position[1] - 1]
+      diag << [position[0] + 1, position[1] + 1]
+    end
+    legal_moves(diag)
+  end
+
+  def possible_next_moves_pawn(all_occupied_spaces)
+    [possible_next_moves_pawn_diag] + [possible_next_moves_pawn_horiverti(all_occupied_spaces)]
   end
 
   def possible_next_moves_bishop(all_occupied_spaces)
