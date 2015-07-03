@@ -153,7 +153,7 @@ class Piece
 
 
 
-  def possible_next_moves_queen
+  def possible_next_moves_queen(all_occupied_spaces)
     possible_next_moves_rook(all_occupied_spaces) + possible_next_moves_bishop(all_occupied_spaces)
   end
 

@@ -56,7 +56,16 @@ class ChessGame
       line_symbol = line.map { |position| position == ' ' ? ' ' : position.symbol }
       puts "#{nline + 1} |" + line_symbol.join(' |') + ' |'
     end
-    return nil
+    nil
+  end
+
+  def other_color(color)
+    color == 'white' ? 'black' : 'white'
+  end
+
+  # checks if there is a empty space in the given position
+  def empty_house?(position)
+    board[position[0]][position[1]] == ' '
   end
 
   # returns all the spaces on the board that are occupied with a piece of color 'color'
@@ -74,42 +83,63 @@ class ChessGame
     occupied_spaces('black') + occupied_spaces('white')
   end
 
-  # checks if there is a empty space in the given position
-  def empty_house?(position)
-    board[position[0]][position[1]] == ' '
-  end
 
-  def move_legality(from, to, color)
+  # returns true if the piece choosen is block and can't move
+  def legal_from_1?(from, color)
     piece = board[from[0]][from[1]]
-    if piece == ' '
-      false
-    elsif piece.type == 'pawn'
-      move_legality_pawn(from, to, color, piece)
+    pnm = piece.possible_next_moves(all_occupied_spaces)
+    if piece.type == 'pawn'
+      legal_from_1_pawn?(color, pnm)
     else
-      occupied_spaces(color).include?(from) && !occupied_spaces(color).include?(to) && piece.possible_next_moves(all_occupied_spaces).include?(to)
+      pnm.length != 0 && !pnm.map { |p| board[p[0]][p[1]] == ' ' ? ' ' : board[p[0]][p[1]].color }.all? { |p| p == color }
     end
   end
 
-  def move_legality_pawn(from, to, color, piece)
+  # returns true if pawn can move
+  def legal_from_1_pawn?(color, pnm)
+    result = false
+    pnm[0].each do |p|
+      result = true if occupied_spaces(other_color(color)).include?(p)
+    end
+    result = true if board[pnm[1][0][0]][pnm[1][0][1]] == ' '
+    result
+  end
+
+  # returns true if there is a piece of the player's color on the position she has choosen
+  def legal_from_2?(from, color)
+    occupied_spaces(color).include?(from)
+  end
+
+  # returns false if the player is trying to move the piece to a position where already his a piece of the player's color
+  def legal_to_1?(to, color)
+    !occupied_spaces(color).include?(to)
+  end
+
+  # returns true if the move payer wants to make is legal considering the piece choosen
+  def legal_to_2?(to, from)
+    piece = board[from[0]][from[1]]
+    if piece.type == 'pawn'
+      move_legality_pawn(to, piece)
+    else
+      piece.possible_next_moves(all_occupied_spaces).include?(to)
+    end
+  end
+
+  # returns true if the player is trying to move the pawn to a legal position
+  def move_legality_pawn(to, piece)
     diagonals_possible = piece.possible_next_moves(all_occupied_spaces)[0]
     front_possible = piece.possible_next_moves(all_occupied_spaces)[1]
-    occupied_spaces(color).include?(from) && !occupied_spaces(color).include?(to) && ((diagonals_possible.include?(to) && all_occupied_spaces.include?(to)) || (front_possible.include?(to) && board[to[0]][to[1]] == ' '))
+    ((diagonals_possible.include?(to) && all_occupied_spaces.include?(to)) || (front_possible.include?(to) && board[to[0]][to[1]] == ' '))
   end
 
-  def move(from, to, color)
-    if move_legality(from, to, color)
-      piece  = board[from[0]][from[1]]
-      piece.position = [to[0], to[1]]
-      board[from[0]][from[1]] = ' '
-      board[to[0]][to[1]] = piece
-    else
-      false
-    end
+ # move piece from -> to
+  def move(from, to)
+    piece  = board[from[0]][from[1]]
+    piece.position = [to[0], to[1]]
+    piece.n = 0
+    board[from[0]][from[1]] = ' '
+    board[to[0]][to[1]] = piece
   end
 
 end
 
-# turn
-# Which move do you want to make?
-# move_legality
-# move
