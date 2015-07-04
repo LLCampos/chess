@@ -53,6 +53,7 @@ describe 'Pieces' do
         expect(@rook.possible_next_moves(@occupied_spaces)).to eql([[4, 1], [4, 2], [4, 4], [4, 5], [5, 3], [6, 3], [7, 3], [3, 3]].sort)
       end
 
+
   end
 
 

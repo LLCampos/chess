@@ -33,6 +33,9 @@ class Game
     elsif !chess_game.legal_from_2?(from, color)
       puts "There isnt a #{color} piece in that position!"
       ask_from(color)
+    elsif !chess_game.can_king_move?(from, color)
+      puts "You can't move your king!"
+      ask_from(color)
     else
       from
     end
@@ -50,6 +53,9 @@ class Game
       ask_to(color, from)
     elsif !chess_game.legal_to_2?(to, from)
       puts "Your piece can't move to that position!"
+      ask_to(color, from)
+    elsif !chess_game.can_king_move_to?(color, from, to)
+      puts "You can't move your king to that position! I  would be a check-mate!"
       ask_to(color, from)
     else
       to

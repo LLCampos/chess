@@ -84,7 +84,7 @@ class ChessGame
   end
 
 
-  # returns true if the piece choosen is block and can't move
+  # returns true if the piece choosen is blocked and can't move
   def legal_from_1?(from, color)
     piece = board[from[0]][from[1]]
     pnm = piece.possible_next_moves(all_occupied_spaces)
@@ -142,14 +142,14 @@ class ChessGame
   end
 
 
-  # returns an array with ALL possible positions of ALL the pieces that are of the color given in the argument
+  # returns an array with all possible positions, except fron moves of pawns, of ALL the pieces that are of the color given in the argument
   def total_all_possible_moves(color)
     result = []
     board.each do |line|
       line.each do |p|
         unless p == ' ' || p.color != color
           if p.type == 'pawn'
-            result << p.possible_next_moves(all_occupied_spaces).flatten(1)
+            result << p.possible_next_moves(all_occupied_spaces)[0]
           else
             result << p.possible_next_moves(all_occupied_spaces)
           end
@@ -162,6 +162,33 @@ class ChessGame
     result
   end
 
+  # returns true if the king can make some movement without being in a check-mate position
+  def can_king_move?(from, color)
+    result = false
+    piece = board[from[0]][from[1]]
+    if piece.type == 'king'
+      pnm = piece.possible_next_moves(all_occupied_spaces).delete_if do |p|
+        board[p[0]][p[1]] != ' ' && board[p[0]][p[1]].color == color
+      end
+      pnm.each do |p|
+        result = true unless total_all_possible_moves(other_color(color)).include?(p)
+      end
+      result
+    else
+      true
+    end
+  end
 
+  # returns true if the king can move to that position
+  def can_king_move_to?(color, from, to)
+    result = true
+    piece = board[from[0]][from[1]]
+    if piece.type == 'king'
+      result = false if total_all_possible_moves(other_color(color)).include?(to)
+      result
+    else
+      true
+    end
+  end
 end
 
