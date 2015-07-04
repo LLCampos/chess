@@ -17,13 +17,29 @@ class Game
     chess_game.move(from, to)
   end
 
-  def ask_from(color)
-    puts 'Which piece do you want to move?'
+  def ask(to_or_from, color)
+    if to_or_from == 'from'
+      puts 'Which piece do you want to move?'
+    else
+      puts 'Where do you to move your piece to?'
+    end
     print 'Line: '
     line = gets.chomp.to_i - 1
     print 'Column: '
     column = gets.chomp.to_i - 1
-    from = [line, column]
+    unless (0..7).include?(line) && (0..7).include?(column)
+      puts 'You have to choose positions between 1 and 8!'
+      if to_or_from == 'from'
+        ask_from(color)
+      else
+        ask_to(color)
+      end
+    end
+    [line, column]
+  end
+
+  def ask_from(color)
+    from = ask('from', color)
     if chess_game.empty_house?(from)
       puts 'There\' no piece in there!'
       ask_from(color)
@@ -42,12 +58,7 @@ class Game
   end
 
   def ask_to(color, from)
-    puts 'Where do you to move your piece to?'
-    print 'Line: '
-    line = gets.chomp.to_i - 1
-    print 'Column: '
-    column = gets.chomp.to_i - 1
-    to = [line, column]
+    to = ask('to', color)
     if !chess_game.legal_to_1?(to, color)
       puts "There is already a #{color} piece in that position!"
       ask_to(color, from)
