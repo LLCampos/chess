@@ -141,5 +141,27 @@ class ChessGame
     board[to[0]][to[1]] = piece
   end
 
+
+  # returns an array with ALL possible positions of ALL the pieces that are of the color given in the argument
+  def total_all_possible_moves(color)
+    result = []
+    board.each do |line|
+      line.each do |p|
+        unless p == ' ' || p.color != color
+          if p.type == 'pawn'
+            result << p.possible_next_moves(all_occupied_spaces).flatten(1)
+          else
+            result << p.possible_next_moves(all_occupied_spaces)
+          end
+        end
+      end
+    end
+    result = result.flatten(1).uniq.delete_if do |p|
+      occupied_spaces(color).include?(p)
+    end
+    result
+  end
+
+
 end
 
