@@ -143,12 +143,12 @@ class ChessGame
 
 
   # returns an array with all possible positions, except fron moves of pawns, of ALL the pieces that are of the color given in the argument
-  def total_all_possible_moves(color)
+  def total_all_possible_moves(color, n = 0)
     result = []
     board.each do |line|
       line.each do |p|
         unless p == ' ' || p.color != color
-          if p.type == 'pawn'
+          if p.type == 'pawn' && n == 0
             result << p.possible_next_moves(all_occupied_spaces)[0]
           else
             result << p.possible_next_moves(all_occupied_spaces)
@@ -190,5 +190,20 @@ class ChessGame
       true
     end
   end
+
+  # returns true if the king of the color given in the argument is in check
+  def check?(color)
+    board.each do |line|
+      a = line.find do |p|
+        p != ' ' && p.type == 'king' && p.color == color
+      end
+      @king_position = a.position unless a.nil?
+    end
+    total_all_possible_moves(other_color(color)).include?(@king_position)
+  end
+
+ # def check_mate?(color)
+#
+ #""end
 end
 

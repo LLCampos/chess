@@ -26,6 +26,28 @@ describe 'ChessGame' do
     end
   end
 
+  describe '#check?' do
+
+    context 'when king is not in check' do
+      it 'returns false' do
+        expect(@board.check?('black')).to eql(false)
+        expect(@board.check?('white')).to eql(false)
+      end
+    end
+
+    context 'when king is in check' do
+      before do
+        @board.move([1,2], [2,2])
+        @board.move([7,2], [3,0])
+      end
+      it "returns true" do
+        expect(@board.check?('white')).to eq(true)
+      end
+    end
+  end
+
+
+
 
 end
 
@@ -55,6 +77,8 @@ describe 'Pieces' do
 
 
   end
+
+
 
 
 end
