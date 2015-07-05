@@ -213,14 +213,13 @@ class ChessGame
     pieces
   end
 
-  #
-  def test_move(piece_initial_position, piece_movement, movement, color)
+  # helper method of checkmate method
+  def test_move(piece, piece_initial_position, piece_movement, movement, color)
     result = true
     move(piece_initial_position, movement)
-    unless check?(color)
-      result = false
-    end
+    result = false unless check?(color)
     move(movement, piece_initial_position, piece_movement)
+    board[piece_initial_position[0]][piece_initial_position[1]].n = 1 if piece.n == 1
     result
   end
 
@@ -239,7 +238,7 @@ class ChessGame
       pnm.each do |movement|
         piece_initial_position = piece.position
         piece_movement = board[movement[0]][movement[1]]
-        result = false if test_move(piece_initial_position, piece_movement, movement, colour) == false
+        result = false if test_move(piece, piece_initial_position, piece_movement, movement, colour) == false
       end
     end
     result
