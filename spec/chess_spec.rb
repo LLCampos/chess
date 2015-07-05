@@ -46,6 +46,29 @@ describe 'ChessGame' do
     end
   end
 
+  describe '#checkmate?' do
+
+    context 'king in checkmate position' do
+      before do
+        @board.move([1, 2], [2, 2])
+        @board.move([7, 2], [3, 0])
+      end
+      it 'returns true' do
+        expect(@board.checkmate?('white')).to eql(true)
+      end
+    end
+
+
+    context 'not a checkmate' do
+      it 'returns false' do
+        expect(@board.checkmate?('black')).to eql(false)
+        expect(@board.checkmate?('white')).to eql(false)
+      end
+    end
+
+
+  end
+
 
 
 

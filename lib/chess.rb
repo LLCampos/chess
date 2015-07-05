@@ -133,11 +133,11 @@ class ChessGame
   end
 
  # move piece from -> to
-  def move(from, to)
-    piece  = board[from[0]][from[1]]
+  def move(from, to, left_behind = ' ')
+    piece = board[from[0]][from[1]]
     piece.position = [to[0], to[1]]
     piece.n = 0
-    board[from[0]][from[1]] = ' '
+    board[from[0]][from[1]] = left_behind
     board[to[0]][to[1]] = piece
   end
 
@@ -202,8 +202,47 @@ class ChessGame
     total_all_possible_moves(other_color(color)).include?(@king_position)
   end
 
- # def check_mate?(color)
-#
- #""end
+  # returns an array with all pieces of the color given in the argument
+  def all_pieces(color)
+    pieces = []
+    board.each do |line|
+      line.find do |p|
+        pieces << p if p != ' ' &&  p.color == color
+      end
+    end
+    pieces
+  end
+
+  #
+  def test_move(piece_initial_position, piece_movement, movement, color)
+    result = true
+    move(piece_initial_position, movement)
+    unless check?(color)
+      result = false
+    end
+    move(movement, piece_initial_position, piece_movement)
+    result
+  end
+
+
+  # returns true if the king of the color given in the argument is in checkmate
+  def checkmate?(colour)
+    result = true
+    pieces = all_pieces(colour)
+    pieces.each do |piece|
+      pnm = piece.possible_next_moves(all_occupied_spaces)
+      if piece.type == 'pawn'
+        pnm.flatten!(1)
+        pnm = pnm.keep_if { |to| move_legality_pawn(to, piece) }
+      end
+      pnm = pnm.delete_if { |p| occupied_spaces(colour).include?(p) }
+      pnm.each do |movement|
+        piece_initial_position = piece.position
+        piece_movement = board[movement[0]][movement[1]]
+        result = false if test_move(piece_initial_position, piece_movement, movement, colour) == false
+      end
+    end
+    result
+  end
 end
 
