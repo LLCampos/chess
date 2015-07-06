@@ -59,9 +59,6 @@ class ChessGame
     nil
   end
 
-  def other_color(color)
-    color == 'white' ? 'black' : 'white'
-  end
 
   # checks if there is a empty space in the given position
   def empty_house?(position)
@@ -243,5 +240,9 @@ class ChessGame
     end
     result
   end
+end
+
+def other_color(color)
+  color == 'white' ? 'black' : 'white'
 end
 

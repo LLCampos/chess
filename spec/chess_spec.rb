@@ -56,6 +56,8 @@ describe 'ChessGame' do
       it 'returns true' do
         expect(@board.checkmate?('white')).to eql(true)
       end
+
+
     end
 
 

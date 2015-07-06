@@ -1,23 +1,70 @@
 require_relative 'chess'
+require 'yaml'
+require 'pry'
 
 class Game
-  attr_accessor :chess_game
+  attr_accessor :chess_game, :turn
   def initialize
     @chess_game = ChessGame.new
+    @player_turn = 'black'
   end
 
   def show
     @chess_game.show
   end
 
+  def save_game(file)
+    yaml = YAML::dump(self)
+    File.open("#{file}.yaml", "w") { |f| f.write(yaml) }
+  end
+
+  def del_temp
+    File.delete("temp.yaml")
+  end
+
+  def load(file)
+    game_file = File.open("#{file}.yaml", 'r') { |f| f.read }
+    YAML::load(game_file)
+  end
+
+  def turns
+    loop do
+      show
+      puts "\n\n"
+      puts "#{@player_turn.capitalize} pieces turn!"
+      puts "\n\n"
+      turn(@player_turn)
+    end
+  end
+
+  def checkmate(color)
+    show
+    puts "Checkmate! #{color.capitalize} pieces win the game!"
+    start_game
+  end
+
+  def self_check
+    puts "You can't move your piece to that place. It would be check for you!"
+    game = load('temp')
+    game.turns
+  end
+
 
   def turn(color)
+    save_game('temp')
     from = ask_from(color)
     to = ask_to(color, from)
     chess_game.move(from, to)
+    if chess_game.check?(color)
+      self_check
+    elsif chess_game.checkmate?(other_color(color))
+      checkmate(color)
+    end
+    @player_turn = other_color(color)
+    del_temp
   end
 
-  def ask(to_or_from, color)
+  def ask(to_or_from, color, f = [])
     if to_or_from == 'from'
       puts 'Which piece do you want to move?'
     else
@@ -32,7 +79,7 @@ class Game
       if to_or_from == 'from'
         ask_from(color)
       else
-        ask_to(color)
+        ask_to(color, f)
       end
     end
     [line, column]
@@ -58,7 +105,7 @@ class Game
   end
 
   def ask_to(color, from)
-    to = ask('to', color)
+    to = ask('to', color, from)
     if !chess_game.legal_to_1?(to, color)
       puts "There is already a #{color} piece in that position!"
       ask_to(color, from)
@@ -78,7 +125,8 @@ class Game
 end
 
 def initial_message
-  puts 'Welcome to RubyChess! Player 1 will play with the black pieces, Player 2 with the white ones!'
+  puts 'Welcome to RubyChess!'
+  puts 'In RubyChess, black pieces go first!'
 end
 
 
@@ -86,19 +134,5 @@ def start_game
   game = Game.new
   initial_message
   puts "\n\n"
-  puts 'Player 1 goes first!'
-  loop do
-    puts "\n\n"
-    game.show
-    puts "\n\n"
-    game.turn('black')
-    puts "\n\n"
-    puts 'Player\'s 2 turn!'
-    puts "\n\n"
-    game.show
-    puts "\n\n"
-    game.turn('white')
-    puts "\n\n"
-    puts 'Player\'s 1 turn!'
-  end
+  game.turns
 end
