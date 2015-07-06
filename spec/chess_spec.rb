@@ -66,6 +66,15 @@ describe 'ChessGame' do
         expect(@board.checkmate?('black')).to eql(false)
         expect(@board.checkmate?('white')).to eql(false)
       end
+      before do
+        @board.move([7, 4], [3, 1])
+        @board.move([1, 3], [1, 5])
+        @board.move([0, 3], [1, 3])
+        @board.move([7, 1], [4, 4])
+      end
+      it 'returns false' do
+        expect(@board.checkmate?('white')).to eq(false)
+      end
     end
 
 
