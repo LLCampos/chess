@@ -13,18 +13,9 @@ class Game
     @chess_game.show
   end
 
-  def save_game(file)
+  def save_game
     yaml = YAML::dump(self)
-    File.open("#{file}.yaml", "w") { |f| f.write(yaml) }
-  end
-
-  def del_temp
-    File.delete("temp.yaml")
-  end
-
-  def load(file)
-    game_file = File.open("#{file}.yaml", 'r') { |f| f.read }
-    YAML::load(game_file)
+    File.open("saved_game.yaml", "w") { |f| f.write(yaml) }
   end
 
   def turns
@@ -40,18 +31,17 @@ class Game
   def checkmate(color)
     show
     puts "Checkmate! #{color.capitalize} pieces win the game!"
-    start_game
+    new_game
   end
 
   def self_check
     puts "You can't move your piece to that place. It would be check for you!"
-    game = load('temp')
-    game.turns
+    load_game.turns
   end
 
 
   def turn(color)
-    save_game('temp')
+    save_game
     from = ask_from(color)
     to = ask_to(color, from)
     chess_game.move(from, to)
@@ -61,7 +51,6 @@ class Game
       checkmate(color)
     end
     @player_turn = other_color(color)
-    del_temp
   end
 
   def ask(to_or_from, color, f = [])
@@ -124,15 +113,29 @@ class Game
 
 end
 
-def initial_message
-  puts 'Welcome to RubyChess!'
-  puts 'In RubyChess, black pieces go first!'
+def load_game
+  game_file = File.open("saved_game.yaml", 'r') { |f| f.read }
+  YAML::load(game_file)
+end
+
+def start_game
+  puts "\n" + 'Welcome to RubyChess! :D'
+  puts 'The game is automatically saved after each turn! Press Crtl + C to exit the game anytime.' + "\n\n"
+  puts "Do you want to: \n 1) Start a new game \n 2) Continue a old one"
+  input = gets.chomp
+  if input == '2'
+    load_game.turns
+  else
+    new_game
+  end
 end
 
 
-def start_game
+def new_game
   game = Game.new
-  initial_message
+  puts 'In RubyChess, black pieces go first!'
   puts "\n\n"
   game.turns
 end
+
+start_game

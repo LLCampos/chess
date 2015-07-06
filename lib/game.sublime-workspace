@@ -1,1 +1,1101 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"exp",
+				"expeq	expect(obj).to eq(value)"
+			],
+			[
+				"chec",
+				"check"
+			],
+			[
+				"app",
+				"application"
+			],
+			[
+				"pie",
+				"piece_initial_position"
+			],
+			[
+				"paw",
+				"move_legality_pawn"
+			],
+			[
+				"move",
+				"movement"
+			],
+			[
+				"piec",
+				"piece_initial_position"
+			],
+			[
+				"mov",
+				"movement"
+			],
+			[
+				"piece_",
+				"piece_position"
+			],
+			[
+				"piece",
+				"piece_movement"
+			],
+			[
+				"check",
+				"checkmate"
+			],
+			[
+				"con",
+				"context"
+			],
+			[
+				"all",
+				"all_occupied_spaces"
+			],
+			[
+				"poss",
+				"possible_next_moves"
+			],
+			[
+				"des",
+				"describe"
+			],
+			[
+				"each",
+				"each"
+			],
+			[
+				"ask_",
+				"ask_to"
+			],
+			[
+				"ask_to",
+				"ask_to_or_from"
+			],
+			[
+				"to_",
+				"to_or_from"
+			],
+			[
+				"occupied",
+				"occupied_spaces"
+			],
+			[
+				"chess",
+				"chess_game"
+			],
+			[
+				"legal",
+				"legal_to_1"
+			],
+			[
+				"lega",
+				"legal_to_2"
+			],
+			[
+				"ask",
+				"ask_to"
+			],
+			[
+				"possi",
+				"possible_next_moves_pawn_diag"
+			],
+			[
+				"occupi",
+				"occupied_spaces"
+			],
+			[
+				"occ",
+				"occupied_spaces"
+			],
+			[
+				"do",
+				"dob	Insert do |variable| … end"
+			],
+			[
+				"line",
+				"line_symbol"
+			],
+			[
+				"possible_m",
+				"possible_moves_rook"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"cla",
+				"cla	class .. initialize .. end"
+			],
+			[
+				"reverse",
+				"reverse_grid"
+			],
+			[
+				"four",
+				"four_connect_diagonally"
+			],
+			[
+				"diagon",
+				"diagonal1"
+			],
+			[
+				"pla",
+				"player_number"
+			],
+			[
+				"disk",
+				"disk_color"
+			],
+			[
+				"empty",
+				"empty_grid"
+			],
+			[
+				"hro",
+				"horizontally"
+			],
+			[
+				"empt",
+				"empty_grid"
+			],
+			[
+				"horizont",
+				"horizontal_win"
+			],
+			[
+				"hori",
+				"horizontal_win"
+			],
+			[
+				"dia",
+				"diagonal_win2"
+			],
+			[
+				"kn",
+				"knight_moves_"
+			],
+			[
+				"diagona",
+				"diagonal_win1"
+			],
+			[
+				"fou",
+				"four_connected_horizontally"
+			],
+			[
+				"hor",
+				"horizontal_win"
+			],
+			[
+				"vert",
+				"vertical_win"
+			],
+			[
+				"knight",
+				"knight_moves"
+			],
+			[
+				"knigh",
+				"knight_moves"
+			],
+			[
+				"kni",
+				"knight_moves"
+			],
+			[
+				"curre",
+				"current_position"
+			],
+			[
+				"ce",
+				"caesar_cipher"
+			],
+			[
+				"n",
+				"n"
+			],
+			[
+				"half",
+				"half_size"
+			],
+			[
+				"hal",
+				"half2"
+			],
+			[
+				"merge",
+				"merge_sort"
+			],
+			[
+				"fib",
+				"fibs_rec"
+			],
+			[
+				"roman",
+				"roman_mapping"
+			],
+			[
+				"Fil",
+				"File	File.open(\"..\") { |file| .. }"
+			],
+			[
+				"json",
+				"json_viking"
+			],
+			[
+				"jso",
+				"json_viking"
+			],
+			[
+				"File",
+				"File	File.read(\"..\")"
+			],
+			[
+				"rev",
+				"rev_append"
+			],
+			[
+				"scre",
+				"screen_name"
+			],
+			[
+				"followrs",
+				"followers_list"
+			],
+			[
+				"screen",
+				"screen_name"
+			],
+			[
+				"follo",
+				"follower"
+			],
+			[
+				"followr",
+				"followers"
+			],
+			[
+				"scree",
+				"screen_names"
+			],
+			[
+				"start",
+				"start_game"
+			],
+			[
+				"trie",
+				"tries_left"
+			],
+			[
+				"equal",
+				"equal_indexs"
+			],
+			[
+				"already",
+				"already_chosen"
+			],
+			[
+				"letter",
+				"letter"
+			],
+			[
+				"alread",
+				"already_chosen"
+			],
+			[
+				"alre",
+				"already_chosen"
+			],
+			[
+				"word",
+				"word_guess"
+			],
+			[
+				"tr",
+				"tries_left"
+			],
+			[
+				"ran",
+				"random_word"
+			],
+			[
+				"Fi",
+				"File	File.open(\"..\") { |file| .. }"
+			],
+			[
+				"erb",
+				"erb_template"
+			],
+			[
+				"le",
+				"legislators_by_zipcode"
+			],
+			[
+				"legis",
+				"legislator_names"
+			],
+			[
+				"legi",
+				"Legislator"
+			],
+			[
+				"zip",
+				"zipcode"
+			],
+			[
+				"zi",
+				"zipcode"
+			],
+			[
+				"txt",
+				"txt"
+			],
+			[
+				"se",
+				"sentences_sorted"
+			],
+			[
+				"wor",
+				"word_count"
+			],
+			[
+				"sto",
+				"stopwords_count"
+			],
+			[
+				"stop",
+				"stopwords_count"
+			],
+			[
+				"pa",
+				"paragraphs"
+			],
+			[
+				"sent",
+				"sentences_per_paragraph"
+			],
+			[
+				"total",
+				"total_characters_nospaces"
+			],
+			[
+				"token",
+				"token_alone"
+			],
+			[
+				"put",
+				"put_token_alone"
+			],
+			[
+				"alo",
+				"token_alone"
+			],
+			[
+				"ea",
+				"each_with_index"
+			],
+			[
+				"pu",
+				"put_winning_position"
+			],
+			[
+				"jogada",
+				"jogada_computador"
+			],
+			[
+				"las",
+				"lastiaplay"
+			],
+			[
+				"new_cod",
+				"new_code1"
+			],
+			[
+				"ne",
+				"new_code2"
+			],
+			[
+				"new",
+				"new_code1"
+			],
+			[
+				"new_",
+				"new_code1"
+			],
+			[
+				"newcod",
+				"new_code2"
+			],
+			[
+				"newc",
+				"new_code1"
+			],
+			[
+				"wii",
+				"winning_position"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"eac",
+				"each"
+			],
+			[
+				"winn",
+				"winning_position"
+			],
+			[
+				"show",
+				"show_code"
+			],
+			[
+				"user",
+				"user_guess"
+			],
+			[
+				"cod",
+				"code2"
+			],
+			[
+				"color",
+				"color_place_right"
+			],
+			[
+				"guess",
+				"guess_array"
+			],
+			[
+				"joga",
+				"jogada_computador"
+			],
+			[
+				"col",
+				"column"
+			],
+			[
+				"i",
+				"if	if … end"
+			],
+			[
+				"random",
+				"random_code"
+			],
+			[
+				"game",
+				"game_start"
+			],
+			[
+				"place",
+				"place_empty"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"post",
+				"post"
+			],
+			[
+				"mod",
+				"mod	module .. end"
+			],
+			[
+				"player",
+				"player_name"
+			],
+			[
+				"my",
+				"my_each"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "chess.rb",
+			"settings":
+			{
+				"buffer_size": 8394,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "pieces.rb",
+			"settings":
+			{
+				"buffer_size": 4627,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "game.rb",
+			"settings":
+			{
+				"buffer_size": 3177,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/luislc/Desktop/odinproject/chess/spec/chess_spec.rb",
+			"settings":
+			{
+				"buffer_size": 2878,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 369.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"sublimeRELP: r",
+				"SublimeREPL: Ruby"
+			],
+			[
+				"sublimeRELP",
+				"SublimeREPL: Clisp"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 548.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/luislc/Desktop/odinproject/chess/temp.yaml",
+		"/home/luislc/Desktop/question.rb",
+		"/home/luislc/Desktop/odinproject/toy_app/app/models/user.rb",
+		"/home/luislc/Desktop/odinproject/toy_app/app/models/micropost.rb",
+		"/home/luislc/Desktop/odinproject/toy_app/config/routes.rb",
+		"/home/luislc/Desktop/odinproject/toy_app/Gemfile",
+		"/home/luislc/Desktop/odinproject/chess/lib/pieces.rb",
+		"/home/luislc/Desktop/odinproject/chess/spec/chess_spec.rb",
+		"/home/luislc/Desktop/odinproject/chess/lib/game.rb",
+		"/home/luislc/Desktop/odinproject/chess/lib/chess.rb",
+		"/home/luislc/Desktop/odinproject/toy_app/app/controllers/application_controller.rb",
+		"/home/luislc/Desktop/odinproject/hello_world_app/hello_app/config/routes.rb",
+		"/home/luislc/Desktop/odinproject/hello_world_app/hello_app/Gemfile",
+		"/home/luislc/Desktop/odinproject/hello_world_app/hello_app/app/controllers/application_controller.rb",
+		"/home/luislc/Desktop/odinproject/Projects-Basic-Data-Structures-and-Algorithms/knights_travails/lib/knights_travails.rb",
+		"/home/luislc/Desktop/odinproject/Projects-Basic-Data-Structures-and-Algorithms/knights_travails/spec/knights_travails_spec.rb",
+		"/home/luislc/Desktop/odinproject/connect_four/lib/connect_four.rb",
+		"/home/luislc/Desktop/odinproject/curriculum/ruby/using_git_in_the_real_world.md",
+		"/home/luislc/Desktop/odinproject/connect_four/spec/connect_four_spec.rb",
+		"/home/luislc/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/luislc/Desktop/odinproject/Projects-Basic-Data-Structures-and-Algorithms/binary_trees/lib/binary_tree.rb",
+		"/home/luislc/Desktop/append.rb",
+		"/home/luislc/Desktop/odinproject/Projects-Basic-Data-Structures-and-Algorithms/binary_trees/spec/binary_tree_spec.rb",
+		"/home/luislc/Desktop/odinproject/Projects-Basic-Data-Structures-and-Algorithms/binary_tree.rb",
+		"/home/luislc/Desktop/binary_tree.rb",
+		"/home/luislc/Desktop/odinproject/ruby_building_blocks/ruby_building_blocks/spec/enum_methods_spec.rb",
+		"/home/luislc/Desktop/odinproject/ruby_building_blocks/ruby_building_blocks/enum_methods.rb",
+		"/home/luislc/Desktop/odinproject/ruby_building_blocks/ruby_building_blocks/caesar_cipher.rb",
+		"/home/luislc/Desktop/odinproject/ruby_building_blocks/ruby_building_blocks/spec/caesar_cipher_spec.rb",
+		"/home/luislc/Desktop/queue.rb",
+		"/home/luislc/Desktop/thanks.html",
+		"/home/luislc/Desktop/browser.rb",
+		"/home/luislc/Desktop/server.rb",
+		"/home/luislc/Desktop/index.html",
+		"/home/luislc/Desktop/codequiz.rb",
+		"/home/luislc/Desktop/server2.rb",
+		"/home/luislc/Desktop/client.rb",
+		"/home/luislc/Desktop/micro_blogger.rb",
+		"/home/luislc/Desktop/odinproject/hangman/5desk.txt",
+		"/home/luislc/Desktop/odinproject/oop_with_ruby_project/tictac.rb",
+		"/home/luislc/Desktop/odinproject/hangman/hangman.rb",
+		"/home/luislc/Desktop/odinproject/oop_with_ruby_project/mastermind.rb",
+		"/home/luislc/Desktop/event_manager/form_letter.erb",
+		"/home/luislc/Desktop/event_manager/lib/event_manager.rb",
+		"/home/luislc/Desktop/hamlet2.txt",
+		"/home/luislc/Desktop/bbook.rb",
+		"/home/luislc/Desktop/sample.txt",
+		"/home/luislc/Desktop/text.txt",
+		"/home/luislc/Desktop/files.txt",
+		"/home/luislc/Desktop/hamlet.txt",
+		"/home/luislc/Desktop/summarize.rb",
+		"/home/luislc/Desktop/oliver.txt",
+		"/home/luislc/Desktop/analyser.rb",
+		"/home/luislc/Desktop/A ler.txt",
+		"/home/luislc/.config/sublime-text-3/Packages/User/trailing_spaces.sublime-settings",
+		"/home/luislc/Desktop/test.rb",
+		"/home/luislc/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/luislc/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/luislc/Desktop/debugtest.rb",
+		"/home/luislc/Desktop/dungeon.rb",
+		"/home/luislc/Desktop/odinproject/ruby_building_blocks/ruby_building_blocks/bubble_sort.rb",
+		"/home/luislc/Desktop/odinproject/ruby_building_blocks/ruby_building_blocks/stock_picker.rb",
+		"/home/luislc/Desktop/odinproject/ruby_building_blocks/ruby_building_blocks/substrings.rb",
+		"/home/luislc/Desktop/quiz.rb",
+		"/home/luislc/Desktop/rails/blogger/app/views/articles/_form.html.erb",
+		"/home/luislc/Desktop/rails/blogger/app/helpers/articles_helper.rb",
+		"/home/luislc/Desktop/rails/blogger/app/models/article.rb",
+		"/home/luislc/Desktop/rails/blogger/db/migrate/20150601153319_add_paperclip_fields_to_article.rb",
+		"/home/luislc/Desktop/rails/blogger/app/views/tags/index.html.erb",
+		"/home/luislc/Desktop/rails/blogger/Gemfile",
+		"/home/luislc/Desktop/rails/blogger/app/controllers/tags_controller.rb",
+		"/home/luislc/Desktop/rails/blogger/config/routes.rb",
+		"/home/luislc/Desktop/rails/blogger/app/views/articles/show.html.erb",
+		"/home/luislc/Desktop/rails/blogger/app/views/tags/show.html.erb",
+		"/home/luislc/Desktop/rails/blogger/app/controllers/articles_controller.rb",
+		"/home/luislc/Desktop/rails/blogger/app/views/comments/_form.html.erb",
+		"/home/luislc/Desktop/rails/blogger/app/views/articles/_comment.html.erb",
+		"/home/luislc/Desktop/rails/blogger/app/controllers/comments_controller.rb",
+		"/home/luislc/Desktop/rails/blogger/app/models/tag.rb",
+		"/home/luislc/Desktop/rails/test/README.txt",
+		"/home/luislc/Desktop/rails/blogger/app/views/articles/new.html.erb",
+		"/home/luislc/Desktop/rails/blogger/app/views/articles/edit.html.erb",
+		"/home/luislc/Desktop/rails/blogger/app/views/layouts/application.html.erb",
+		"/home/luislc/Desktop/rails/blogger/app/assets/stylesheets/screen.css",
+		"/home/luislc/Desktop/rails/blogger/app/views/articles/index.html.erb",
+		"/home/luislc/Desktop/rails/blogger/db/migrate/20150531083855_create_articles.rb",
+		"/home/luislc/Desktop/rails/blog/config/routes.rb",
+		"/home/luislc/Desktop/rails/blog/app/views/articles/index.html.erb",
+		"/home/luislc/Desktop/rails/blog/app/models/article.rb",
+		"/home/luislc/Desktop/rails/blog/app/models/comment.rb",
+		"/home/luislc/Desktop/rails/blog/app/controllers/articles_controller.rb",
+		"/home/luislc/Desktop/rails/blog/app/views/articles/edit.html.erb",
+		"/home/luislc/Desktop/rails/blog/app/views/articles/show.html.erb",
+		"/home/luislc/Desktop/rails/blog/app/views/articles/new.html.erb",
+		"/home/luislc/Desktop/rails/blog/app/views/articles/_form.html.erb",
+		"/home/luislc/Desktop/rails/blog/app/views/welcome/index.html.erb",
+		"/home/luislc/Desktop/rails/blog/db/migrate/20150527164832_create_articles.rb",
+		"/home/luislc/Desktop/ruby_project/learn_ruby/09_timer/timer.rb",
+		"/home/luislc/Desktop/ruby_project/learn_ruby/03_simon_says/timer.rb",
+		"/home/luislc/Desktop/ruby_project/learn_ruby/03_simon_says/simon_says.rb",
+		"/home/luislc/Desktop/ruby_project/learn_ruby/08_book_titles/book.rb",
+		"/home/luislc/Desktop/ruby_project/learn_ruby/07_hello_friend/friend.rb",
+		"/home/luislc/Desktop/ruby_project/learn_ruby/08_book_titles/book_titles.rb",
+		"/home/luislc/Desktop/ruby_project/learn_ruby/04_pig_latin/pig_latin.rb",
+		"/home/luislc/Desktop/ruby_project/learn_ruby/02_calculator/calculator_spec.rb",
+		"/home/luislc/Desktop/ruby_project/learn_ruby/02_calculator/calculator.rb",
+		"/home/luislc/Desktop/ruby_project/learn_ruby/01_temperature/temperature.rb",
+		"/home/luislc/Desktop/ruby_project/learn_ruby/00_hello/hello.rb",
+		"/home/luislc/Desktop/ruby_project/ruby_project/README.md",
+		"/home/luislc/Desktop/ruby_project/learn_ruby/Gemfile",
+		"/home/luislc/Desktop/project/zombie.rb",
+		"/home/luislc/Desktop/project/spec/zombie_spec.rb",
+		"/home/luislc/Desktop/ruby_tutorial/bla.rb",
+		"/home/luislc/Desktop/ruby_tutorial/learn2.rb",
+		"/home/luislc/Desktop/ruby_tutorial/learn.rb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"load",
+			"'",
+			"start_game",
+			"'",
+			"other",
+			"binding.pry",
+			"pawn",
+			"knight",
+			"knig",
+			"pawn",
+			"'",
+			"/",
+			"\"",
+			"mate",
+			"\"",
+			"other",
+			"datas[\"data\"]",
+			"datas[\"nome\"]",
+			"@",
+			"num",
+			"true",
+			"  validates name:, presence: true\n",
+			"piece_initial_position, piece_movement, movement",
+			"piece_initial_position, piece_movement, movement, colour",
+			"pie",
+			"legal_moves(pm)",
+			"piece_position",
+			"1..8",
+			"possible",
+			", 'white'",
+			", 'black'",
+			" 'black')).",
+			"'black'",
+			"move legality",
+			"empty",
+			"board[from[0]][from[1]]",
+			"board[from[0]][from[1]].",
+			"board[from[0]][from[1]]",
+			"move",
+			"@chess_game",
+			"game",
+			"type",
+			"black",
+			"-",
+			"block_way",
+			"d",
+			" lc",
+			"(position)",
+			"position",
+			"white",
+			"-', ",
+			"white-',",
+			"white-",
+			"white",
+			"black",
+			"false",
+			"black",
+			"possible",
+			"1",
+			"0",
+			"possible_moves",
+			"possible",
+			"from",
+			"board",
+			"\"",
+			"pry",
+			"two",
+			"index",
+			"9",
+			"@b_pawn",
+			"@b_knight",
+			"@b_bishop",
+			"@b_queen",
+			"@b_king",
+			"@b_king ",
+			"\"\\u265A\"",
+			"@w_pawn",
+			"@w_knight",
+			"@w_bishop",
+			"@w_rook",
+			" @w_rook",
+			"@w_rook",
+			"w_queen",
+			"w_king",
+			"@w_queen ",
+			"@w_queen = ",
+			"@w_king",
+			"@b_rook",
+			"possible_moves",
+			"'",
+			"king",
+			"pawn",
+			"knight",
+			"rook",
+			"white",
+			"black",
+			"@bishop",
+			"@black",
+			"b",
+			"B",
+			"b",
+			"w",
+			"0",
+			"1",
+			"b",
+			"black",
+			"current_position",
+			"0",
+			"u265",
+			"w",
+			"\"",
+			"White",
+			"grid.map(&:reverse)",
+			"true",
+			"game",
+			"sk_user",
+			"'",
+			"@black",
+			"@white",
+			"@black",
+			"horizontal_no",
+			"grid",
+			"\"",
+			"diagonal_win",
+			"iagonal_win1",
+			"ertical_win",
+			"orizontal_win",
+			"1"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "chess.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8394,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8215,
+								8215
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2691.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "pieces.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4627,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								755,
+								755
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "game.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3177,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								722,
+								722
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1521.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/luislc/Desktop/odinproject/chess/spec/chess_spec.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2878,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2005,
+								2005
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RSpec/RSpec.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "game.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 247.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
